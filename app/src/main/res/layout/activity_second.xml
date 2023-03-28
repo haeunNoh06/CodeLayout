@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--LinearLayout : 선형 위젯 배치-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#000000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/btn1"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/btn_marginBottom"
+        android:text="@string/btn1_text"/>
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/btn2"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/btn_marginBottom"
+        android:text="@string/btn2_text"/>
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/btn3"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/btn_marginBottom"
+        android:text="@string/btn3_text"/>
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/btn4"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/btn_marginBottom"
+        android:text="@string/btn4_text"/>
+    <!--
+    match_parent : 화면 가로 크기만큼 버튼의 사이즈를 할당
+    wrap_content : 텍스트의 높이를 감쌀 만큼만 버튼의 높이를 할당
+    @color/btn1 : values에 값을 할당하고 참조하여 씀
+    @color/black :
+    textStyle : 폰트 굵기
+    @string/btn1_text : string.xml에 저장해서 사용함
+    -->
+</LinearLayout>

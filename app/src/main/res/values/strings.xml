@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">CodeLayout</string>
+    <string name="title_activity_second">네 개의 버튼</string>
     <string name="greeting">안녕하세요~ 여러분</string>
+    <string name="btn1_text">네이버 홈페이지 열기</string>
+    <string name="btn2_text">911 응급전화 걸기</string>
+    <string name="btn3_text">갤러리 열기</string>
+    <string name="btn4_text">끝내기</string>
 </resources>

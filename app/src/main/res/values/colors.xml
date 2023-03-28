@@ -8,4 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="hotpink">#EC0D59</color>
+    <color name="btn1">#8F8689</color>
+    <color name="btn2">#36DA11</color>
+    <color name="btn3">#ED3574</color>
+    <color name="btn4">#FBF240</color>
 </resources>
