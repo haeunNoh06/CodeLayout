@@ -1,0 +1,183 @@
+/**
+ * You can edit, run, and share this code.
+ * play.kotlinlang.org
+ */
+// fun main() {
+    
+//     var two = Array<IntArray>(3,{IntArray(4,{2})})
+    
+//     two[1][2] = 100
+//     two[2][3] = 200
+//     for ( (i, row) in two.withIndex()) {
+//      	for ( (j, col) in row.withIndex()) {
+//         	print("($i, $j) = $col\t")
+//         }
+//         println()
+//     }
+    
+   
+    // for (int i = 0; i < two.length; i++) {
+    // 	for ( int j = 0; j < two[i].length; j++)
+    // }
+    
+     
+//     var arrList = ArrayList<Int>(3)
+//     arrList.add(10)
+//     arrList.add(20)
+//     arrList.add(30)
+//     arrList.add(40)
+//     arrList.add(50)
+    
+//     var sum = 0
+//     for ( num in arrList ) {
+//         sum += num
+//     }
+//     println(sum)
+    
+    
+//     for ( 변수 in 시작..끝 step 증가량)
+//     이 부분을 반복 실행
+//     }
+    
+//     for ( 변수 in 배열명.indices) {
+//     }
+	
+// 	var leng = 5
+//     for ( j in 1..leng)
+//     	print("$j / ")
+        
+//     for ( i in 1 until leng)
+//     	print("$i | ")
+
+
+// 	var one : IntArray = intArrayOf(10,20,30)
+//     for ( i in one.indices) {
+//         println(one[i])
+//     }
+//     for ( value in one) {
+//         println(value)
+//     }
+
+// 	var two2 : Array<String> = arrayOf("하나","둘","셋")
+//     for ( i in 0..2 step 1) {
+//         println(two2[i])
+//     }
+    
+//     var k : Int = 0
+//     while ( k < two.size) {
+//         println(two[k])
+//         k++
+//     }
+// }
+
+// 상속과 오버라이딩을 허용하는 open
+open class Car {
+    var color : String = ""
+    var speed : Int = 0
+    
+    // 공유 영역 (static)
+    companion object {
+        var carCount : Int = 0
+        const val MAXSPEED : Int = 200
+        const val MINSPEED : Int = 0
+        fun currentCarCount() : Int {
+            return carCount
+        }
+    }
+    
+    constructor(color: String, speed : Int) {
+        this.color = color
+        this.speed = speed
+    }
+    
+    constructor(speed : Int) {
+        this.speed = speed
+    }
+    
+    constructor(color: String) {
+        this.color = color
+    }
+    
+    constructor() {
+        
+    }
+    
+    // 오버라이딩 허용
+    open fun upSpeed(value: Int) {
+        if ( speed+value >= 200)
+        	speed = 200
+        else 
+        	speed = speed+value
+        
+    }
+    
+    fun downSpeed(value: Int) {
+        if ( speed-value <= 0 )
+        	speed = 0
+        else 
+        	speed = speed - value
+    }
+
+}
+
+fun main() {
+    var myCar1 : Car = Car("빨강", 0)
+    
+    var myCar2 : Car = Car("파랑", 0)
+    
+    var myCar3 : Car = Car("초록", 0)
+    
+    println("생산된 차의 대수(정적 필드) ==> "+Car.carCount)
+    println("생산된 차의 대수(정적 메서드) ==> "+Car.currentCarCount())
+    println("차의 최고 제한 속도 ==> "+Car.MAXSPEED)
+    
+    println("PI의 값 ==> "+Math.PI)
+    println("3의 5제곱 ==> "+Math.pow(3.0,5.0))
+    
+    myCar1.upSpeed(50)
+    println("자동차1의 색상은 "+myCar1.color+"이며, 속도는 "+myCar1.speed+"km입니다.");
+    
+    myCar2.upSpeed(20)
+    println("자동차2의 색상은 "+myCar2.color+"이며, 속도는 "+myCar2.speed+"km입니다.");
+    
+    myCar3.upSpeed(250)
+    println("자동차3의 색상은 "+myCar3.color+"이며, 속도는 "+myCar3.speed+"km입니다.");
+    
+    var auto : Automobile = Automobile()
+    auto.upSpeed(250)
+    println("승용차의 속도는 "+auto.speed+"km입니다.")
+}
+
+
+// class Automobile extends Car
+class Automobile : Car {
+    var seatNum : Int = 0
+    
+    constructor() {
+        
+    }
+    
+    fun countSeatNum() : Int{
+        return seatNum
+    }
+    
+    override fun upSpeed(value: Int) {
+        if ( speed+value >= 300)
+        	speed = 300
+        else 
+        	speed = speed+value
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
